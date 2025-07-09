@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Automação_XML_CTEs"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Background="#FF010E44">
+    <Grid x:Name="automacaoCTE" Background="#FF010E44">
         <TextBlock HorizontalAlignment="Center" Height="34" Margin="0,20,0,0" TextWrapping="Wrap" Text="Automação de relatórios de informações de CTEs" VerticalAlignment="Top" Width="436" Foreground="White" FontSize="20"/>
         <Rectangle HorizontalAlignment="Center" Height="5" Margin="0,68,0,0" VerticalAlignment="Top" Width="780" Fill="White" RenderTransformOrigin="0.5,0.5">
             <Rectangle.RenderTransform>
@@ -18,13 +18,15 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Label x:Name="folderSelectLabel" Content="Nenhuma pasta selecionada" HorizontalAlignment="Left" Height="39" Margin="24,140,0,0" VerticalAlignment="Top" Width="364" Foreground="White" FontStyle="Italic" FontSize="9"/>
+        <Label x:Name="folderSelectLabel" Content="Nenhuma pasta selecionada" HorizontalAlignment="Left" Height="39" Margin="24,140,0,0" VerticalAlignment="Top" Width="364" Foreground="White" FontStyle="Italic"/>
         <Button x:Name="folderSelectButton" Content="Selecione a pasta com os arquivos XMLs" HorizontalAlignment="Left" Height="40" Margin="24,100,0,0" VerticalAlignment="Top" Width="364" Background="#FF8192D8" BorderBrush="#FF060B1F" Click="folderSelectButton_Click"/>
-        <Button x:Name="gerarRelatorioButton" Content="Gerar relatório" HorizontalAlignment="Center" Height="55" Margin="0,197,0,0" VerticalAlignment="Top" Width="288" Background="#FFC8DFEC"/>
-        <Label x:Name="savingFolderLabel" Content="Nenhuma pasta selecionada" HorizontalAlignment="Left" Height="39" Margin="405,140,0,0" VerticalAlignment="Top" Width="360" Foreground="White" FontStyle="Italic" FontSize="9"/>
+        <Button x:Name="gerarRelatorioButton" Content="Gerar relatório" HorizontalAlignment="Center" Height="55" Margin="0,277,0,0" VerticalAlignment="Top" Width="288" Background="#FFC8DFEC" Click="gerarRelatorioButton_Click"/>
+        <Label x:Name="savingFolderLabel" Content="Nenhuma pasta selecionada" HorizontalAlignment="Left" Height="39" Margin="405,140,0,0" VerticalAlignment="Top" Width="360" Foreground="White" FontStyle="Italic"/>
         <Button x:Name="savingFolderButton" Content="Selecione a pasta para salvar o relatório" HorizontalAlignment="Left" Height="40" Margin="405,100,0,0" VerticalAlignment="Top" Width="360" Background="#FF8192D8" BorderBrush="#FF060B1F" Click="savingFolderButton_Click"/>
-        <TextBox x:Name="dateTextBox" HorizontalAlignment="Left" Height="26" Margin="10,398,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="98" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" TextChanged="dateTextBox_TextChanged"/>
-        <Label x:Name="gerarRelatorioLabel" Content="Não iniciado" HorizontalAlignment="Center" Height="38" Margin="0,252,0,0" VerticalAlignment="Top" Width="288" Foreground="White" FontStyle="Italic" FontSize="9" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="dateTextBox" HorizontalAlignment="Left" Height="26" Margin="10,398,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="176" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" TextChanged="dateTextBox_TextChanged"/>
+        <Label x:Name="gerarRelatorioLabel" Content="Não iniciado" HorizontalAlignment="Center" Height="38" Margin="0,332,0,0" VerticalAlignment="Top" Width="288" Foreground="White" FontStyle="Italic" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="labelNomeReport" HorizontalAlignment="Center" Height="24" TextWrapping="Wrap" Text="Relatório XMLs" VerticalAlignment="Top" Width="288" Margin="0,217,0,0"/>
+        <Label Content="Coloque o nome do report." HorizontalAlignment="Center" Height="33" Margin="0,184,0,0" VerticalAlignment="Top" Width="288" Foreground="White"/>
 
     </Grid>
 </Window>
